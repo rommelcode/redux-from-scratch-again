@@ -4,6 +4,7 @@ function Counter() {
     const dispatch = useDispatch();
 
     function handleCounter() {
+        console.log('handle counter')
         dispatch({
             type: "ADD_TO_COUNTER"
         })
@@ -11,7 +12,7 @@ function Counter() {
 
     return <div>
         {count}
-        <button onClick={() =>handleCounter}>Add to counter</button>
+        <button onClick={() => dispatch({type:"ADD_TO_COUNTER"})}>Add to counter</button>
     </div>
 }
 
